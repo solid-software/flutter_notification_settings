@@ -1,14 +1,22 @@
-# flutter_notification_settings
+# Flutter Notification Settings
+This plugin allows you to check if notifications are enabled on your device.
 
-A new Flutter project.
+To learn more about the notifications, follow the link: 
+[for Android](https://developer.android.com/guide/topics/ui/notifiers/notifications) and 
+[for iOS](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/notifications).
 
-## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.io/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Getting started
+To check if notifications are enabled just copy this code or follow [example](https://github.com/solid-software/flutter_notification_settings/tree/master/example):
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+bool isNotificationsEnabled = await FlutterNotificationSettings.notificationsEnabled;
+```
+ For checking your Android Version just add to your code: 
+```dart
+String androidVersion = await FlutterNotificationSettings.platformVersion;
+```
+
+## Current issues
+Current issues list [is here](https://github.com/solid-software/flutter_notification_settings/issues).   
+Found a bug? [Open the issue](https://github.com/solid-software/flutter_notification_settings/issues/new).

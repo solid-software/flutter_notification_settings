@@ -1,4 +1,4 @@
-# flutter_notification_settings_example
+# Flutter Notification Settings
 
 Demonstrates how to use the flutter_notification_settings plugin.
 
