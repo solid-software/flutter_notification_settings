@@ -1,4 +1,4 @@
-package com.solidsoftware.flutternotificationsettings;
+package software.solid.flutternotificationsettings;
 
 import android.app.NotificationManager;
 import android.content.Context;

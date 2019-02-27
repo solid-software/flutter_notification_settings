@@ -1,4 +1,4 @@
-group 'com.solidsoftware.flutternotificationsettings'
+group 'software.solid.flutternotificationsettings'
 version '1.0-SNAPSHOT'
 
 buildscript {

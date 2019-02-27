@@ -1,4 +1,4 @@
-package com.solidsoftware.flutternotificationsettingsexample;
+package software.solid.flutternotificationsettingsexample;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
