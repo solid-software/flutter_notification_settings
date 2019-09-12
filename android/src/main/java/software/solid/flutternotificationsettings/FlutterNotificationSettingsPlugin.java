@@ -1,8 +1,7 @@
 package software.solid.flutternotificationsettings;
 
-import android.app.NotificationManager;
 import android.content.Context;
-import android.support.v4.app.NotificationManagerCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
