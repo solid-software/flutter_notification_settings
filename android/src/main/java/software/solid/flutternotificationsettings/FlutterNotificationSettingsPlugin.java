@@ -8,10 +8,15 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 
 /** FlutterNotificationSettingsPlugin */
-public class FlutterNotificationSettingsPlugin implements MethodCallHandler {
+public class FlutterNotificationSettingsPlugin implements MethodCallHandler, FlutterPlugin {
   private static Context context;
+  private MethodChannel channel;
 
 
   /** Plugin registration. */
@@ -36,4 +41,16 @@ public class FlutterNotificationSettingsPlugin implements MethodCallHandler {
         break;
     }
   }
+
+  @Override
+  public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+    channel = new MethodChannel(binding.getBinaryMessenger(), "flutter_notification_settings");
+    channel.setMethodCallHandler(new FlutterNotificationSettingsPlugin());
+    context = binding.getApplicationContext();
+  }
+
+  @Override
+  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    channel.setMethodCallHandler(null);
+    channel = null;  }
 }
